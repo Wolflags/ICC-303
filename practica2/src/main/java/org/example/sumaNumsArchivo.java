@@ -11,22 +11,21 @@ public class sumaNumsArchivo {
     public static void main(String[] args) throws IOException {
         // 1. Genera un archivo con 1,000,000 de registros comprendido entre 1 y 10,000,
         // el cual deberá usar como base para los demás cálculos.
-        String nombreArchivo = "numeros";
-        generarArchivo(nombreArchivo);
+        generarArchivo();
+        int[] numeros = new int[NUM_REGISTROS];
+        BufferedReader lector = new BufferedReader(new FileReader(NOMBRE_ARCHIVO + ".txt"));        for (int i = 0; i < numeros.length; i++) {
+            numeros[i] = Integer.parseInt(lector.readLine());
+        }
 
 
         // 2. Escribe un programa secuencial que sume los elementos de un arreglo de un
         // millón de enteros
-        BufferedReader lector = new BufferedReader(new FileReader(nombreArchivo + ".txt"));
-        String linea;
         long sumaSecuencial = 0;
-
         // Empieza el proceso de suma
         long inicioSecuencial = System.nanoTime();
-        while ((linea = lector.readLine()) != null) {
-            sumaSecuencial += Integer.parseInt(linea);
+        for (int numero : numeros) {
+            sumaSecuencial += numero;
         }
-        lector.close();
         long finSecuencial = System.nanoTime();
         // Tiempo transcurrido en segundos
         double tiempoTranscurrido = (finSecuencial - inicioSecuencial) / 1_000_000_000.0;
@@ -44,8 +43,8 @@ public class sumaNumsArchivo {
     }
 
 
-    public static void generarArchivo(String nombreArchivo) throws IOException {
-        File file = new File(nombreArchivo + ".txt");
+    public static void generarArchivo( ) throws IOException {
+        File file = new File(NOMBRE_ARCHIVO + ".txt");
         if (file.exists()) {
             //System.out.println("El archivo " + nombreArchivo + ".txt ya existe.");
             return;
