@@ -1,6 +1,18 @@
 # ICC-303
 # Programacion Paralela y Concurrente ICC-303
+# PRACTICA #2
+## Paralelización de Algoritmos y Análisis de Rendimiento
 
+
+## Integrantes:
+### JOSÉ RAFAEL JÁQUEZ TORRES #10146000
+### VIANNY MANUELA CRUZ CRUZ #1014
+
+# Breve descripción del programa
+El programa consiste en un algoritmo que genera un archivo llamado numeros.txt en caso de que no exista, en caso de existir lee de forma secuencial el tiempo en que tarda sumar todos los numeros del archivo y mide el tiempo en que tarda hacer esto, luego utiliza el mismo archivo pero lo lee de manera paralela utilizando una cantidad de núcleos especificada previamente nuevamente registrando el tiempo tomado, finalmente imprime el resultado de la suma secuencial y el tiempo tomado y de igual forma imprime el resultado de la suma paralela y el tiempo tomado.
+
+# Instrucciones para compilar y ejecutar el programa
+Para la compilación y ejecución del programa, únicamente es necesario un entorno de desarrollo Java, se debe especificar en las variables iniciales la cantidad de núcleos a utilizar para la suma paralela y hacer click en ejecutar para obtener los resultados.
 
 # Análisis del rendimiento en función del número de procesos utilizados
 Observando los tiempos secuenciales vs los paralelos, podemos apreciar que que los tiempos de ejecución paralelos son menores que los secuenciales para 1, 2 y 4 procesos sin embargo, cuando se utilizan más de 8 hilos o procesos, el tiempo de ejecución en paralelo se incrementa de manera considerable, llegando a ser mayor que el tiempo de ejecución en secuencia.
