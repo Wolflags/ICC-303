@@ -6,7 +6,7 @@
 
 ## Integrantes:
 ### JOSÉ RAFAEL JÁQUEZ TORRES #10146000
-### VIANNY MANUELA CRUZ CRUZ #1014
+### VIANNY MANUELA CRUZ CRUZ #10145970
 
 # Breve descripción del programa
 El programa consiste en un algoritmo que genera un archivo llamado numeros.txt en caso de que no exista, en caso de existir lee de forma secuencial el tiempo en que tarda sumar todos los numeros del archivo y mide el tiempo en que tarda hacer esto, luego utiliza el mismo archivo pero lo lee de manera paralela utilizando una cantidad de núcleos especificada previamente nuevamente registrando el tiempo tomado, finalmente imprime el resultado de la suma secuencial y el tiempo tomado y de igual forma imprime el resultado de la suma paralela y el tiempo tomado.
