@@ -10,7 +10,7 @@ public class sumaNumsArchivo {
 
     private static final String NOMBRE_ARCHIVO = "numeros2";
     private static final int  NUM_REGISTROS = 1000000;
-    private static final int NUM_HILOS = 8;
+    private static final int NUM_HILOS = 4;
 
     public static void main(String[] args) throws IOException, InterruptedException {
         // 1. Genera un archivo con 1,000,000 de registros comprendido entre 1 y 10,000,
