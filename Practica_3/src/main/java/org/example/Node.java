@@ -3,6 +3,7 @@ package org.example;
 public class Node {
     private int id;
     private Node nextNode; // Referencia al siguiente nodo en el anillo
+    private Node prevNode; // Referencia al nodo anterior en el anillo
 
     public Node(int id) {
         this.id = id;
@@ -14,6 +15,14 @@ public class Node {
 
     public Node getNextNode() {
         return nextNode;
+    }
+
+    public void setPrevNode(Node prevNode) {
+        this.prevNode = prevNode;
+    }
+
+    public Node getPrevNode() {
+        return prevNode;
     }
 
     public int getId() {
@@ -29,7 +38,7 @@ public class Node {
         try {
             Thread.sleep((long) (Math.random() * 1000));
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            Thread.currentThread().interrupt();
         }
     }
 }

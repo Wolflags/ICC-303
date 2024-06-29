@@ -19,7 +19,7 @@ public class RingNetwork implements NetworkTopology {
         }
 
         for (int i = 0; i < numberOfNodes; i++) {
-            // Setea el siguiente nodo en el anillo, conectando el último con el primero
+            // Configura el siguiente nodo en el anillo, conectando el último con el primero
             nodes.get(i).setNextNode(nodes.get((i + 1) % numberOfNodes));
         }
     }
