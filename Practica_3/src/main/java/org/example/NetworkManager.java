@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.Frameworks.HypercubeNetwork;
 import org.example.Interfaces.NetworkTopology;
 
 public class NetworkManager {
@@ -7,7 +8,12 @@ public class NetworkManager {
 
     public void configureNetwork(NetworkTopology network) {
         this.network = network;
-        this.network.configureNetwork(5); // Configure network with 5 nodes default
+        if (network instanceof HypercubeNetwork) {
+            this.network.configureNetwork(8);
+            return;
+        }
+        this.network.configureNetwork(5);
+
     }
 
     public void runNetwork() {
